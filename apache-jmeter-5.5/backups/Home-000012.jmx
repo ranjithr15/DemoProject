@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Home" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Home/generate_204-1" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">www.gstatic.com</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/generate_204</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Home/generate_204-2" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">www.gstatic.com</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/generate_204</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="Pragma" elementType="Header">
+                  <stringProp name="Header.name">Pragma</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Home/service/update2/json?cup2key=12:UN1IxrqzmB5jI_-SR0IlsiUam8LLVa4oGYtm6ft-Ta8&amp;cup2hreq=00e537d92ff807650458da5a0646ff13efbb2eb18e58c8f5b3e043a7c612190e-3" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;request&quot;:{&quot;@os&quot;:&quot;win&quot;,&quot;@updater&quot;:&quot;chrome&quot;,&quot;acceptformat&quot;:&quot;crx3&quot;,&quot;app&quot;:[{&quot;appid&quot;:&quot;neifaoindggfcjicffkgpmnlppeffabd&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:1299:&quot;,&quot;cohorthint&quot;:&quot;Windows (102+, canary/dev/beta/stable)&quot;,&quot;cohortname&quot;:&quot;Windows (102+, canary/dev/beta/stable)&quot;,&quot;enabled&quot;:true,&quot;installdate&quot;:5818,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.faef821457e35b44f92e45ae9c7c4424eb39c8f8bd02562a358bd2c5542570b9&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{cd955dd2-7593-4fce-a99a-b3def43c6747}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;1.0.2512.0&quot;},{&quot;appid&quot;:&quot;gcmjkmgdlgnkkcocmoeiminaijmmjnii&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:bm1:&quot;,&quot;cohorthint&quot;:&quot;M54AndUp&quot;,&quot;cohortname&quot;:&quot;M54AndUp&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.4aa999dc7ab228814256930b52b83afa3f6132f05d49b6c44842c8fc08969b9b&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{6f0c30c2-b3a9-4f30-b984-77f267260477}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;9.41.0&quot;},{&quot;appid&quot;:&quot;oimompecagnajdejgnnjijobebaeigek&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:1bk9:&quot;,&quot;cohorthint&quot;:&quot;4.10.2557.0 for Chrome 95+&quot;,&quot;cohortname&quot;:&quot;4.10.2557.0 for Chrome 95+&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{d200cad4-87fc-4eef-8db7-bfb794af1e16}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;4.10.2557.0&quot;},{&quot;accept_locale&quot;:&quot;ENUS500000&quot;,&quot;appid&quot;:&quot;obedbbhbpmojnkanicioggnmelmoomoc&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:s6f:&quot;,&quot;cohorthint&quot;:&quot;Auto&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.a4e30eb8763f1086870526a26d19dc1d5a7af2304689c750b85d5a13219a4fe1&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{52e62457-0ef1-4582-aa01-3be7729d04a2}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;20221213.495990378&quot;},{&quot;appid&quot;:&quot;giekcmmlnklenlaomppkphknjmnnpneh&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:j5l:&quot;,&quot;cohorthint&quot;:&quot;Auto&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.fd515ec0dc30d25a09641b8b83729234bc50f4511e35ce17d24fd996252eaace&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{91aab01e-a116-4d10-b5a9-0a7f41e4c55f}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;7&quot;},{&quot;appid&quot;:&quot;lmelglejhemejginpboagddgdfbepgmp&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:lwl:&quot;,&quot;cohorthint&quot;:&quot;Auto&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.1de7040dea82a3ae7c104eba177f013852bfd95912d6d89f249c3e85ef461163&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{5071dcac-b489-415f-a405-92034ced533e}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;373&quot;},{&quot;appid&quot;:&quot;ehgidpndbllacpjalkiimkbadgjfnnmc&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:ofl:&quot;,&quot;cohorthint&quot;:&quot;stable64&quot;,&quot;cohortname&quot;:&quot;stable64&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.a8a79d350c2a5e3bc36226633a8e0bed0dfab184e77f38fc8f0820ebacf8eafc&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{e92e73be-188c-49a2-a416-f8351b1eb6bc}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;2018.8.8.0&quot;},{&quot;appid&quot;:&quot;khaoiebndkojlmppeemjhbpbandiljpe&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:cux:&quot;,&quot;cohorthint&quot;:&quot;Auto&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.e7973d612cbdb825e9950038be9cb915cb938fbd202efadd3520898c24cd45b6&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{366620d2-9016-439d-9036-32f0ab94bc4c}&quot;,&quot;rd&quot;:5842},&quot;tag&quot;:&quot;default&quot;,&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;54&quot;},{&quot;appid&quot;:&quot;hnimpnehoodheedghdeeijklkeaacbdc&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1::&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.6f6bc93dcd62dc251850d2ff458fda96083ceb7fbe8eeb11248b8485ef2aea23&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{98d55075-db27-488c-9aac-3955105239c6}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;0.57.44.2492&quot;},{&quot;appid&quot;:&quot;laoigpblnllgcgjnjnllmfolckpjlhki&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:10zr:&quot;,&quot;cohorthint&quot;:&quot;Auto&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{eb77fa66-b3c8-480b-91f1-9a1b54f63fb9}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;1.0.7.1652906823&quot;},{&quot;appid&quot;:&quot;ggkkehgbnfjpeggfpleeakpidbkibbmn&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:ut9/1a0f:&quot;,&quot;cohorthint&quot;:&quot;108-and-above-all-users&quot;,&quot;cohortname&quot;:&quot;108-and-above-all-users&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.ed2f4d0fa9d2f99837719f80e3990498314290c6a294a72296ddcada784dd278&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{d6a65f91-2208-427a-9f58-86d3e385f20b}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;2022.12.16.779&quot;},{&quot;appid&quot;:&quot;gkmgaooipdjhmangpemjhigmamcehddo&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:pw3:&quot;,&quot;cohorthint&quot;:&quot;Stable&quot;,&quot;cohortname&quot;:&quot;Stable&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.f01de52469688ae15bd4cc6e43e5fd0ae8a80d4bd6954967fd4f499c7507aa2e&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{2eb6c294-d811-4fae-a440-2aa11019f0ad}&quot;,&quot;rd&quot;:5842},&quot;tag&quot;:&quot;stable&quot;,&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;107.294.200&quot;},{&quot;appid&quot;:&quot;llkgjffcdpffmhiakmfcdcblohccpfmo&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1::&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.ab8d70a60ce0fba1355fad4edab88fd4d1bccc566b230998180183d1d776992b&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{dbf8a5c9-68c2-4448-8891-093327680589}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;1.0.0.13&quot;},{&quot;appid&quot;:&quot;hfnkpimlhhgieaddgfemjhofmfblmnib&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:jcl:&quot;,&quot;cohorthint&quot;:&quot;Auto&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.6563f28af712333d48c7a5ee154ffd8434c344099ff7c09ba4c644bfbe52f9cf&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{e131fbbb-2fb0-4b34-b707-43c285d77288}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;7792&quot;},{&quot;appid&quot;:&quot;jamhcnnkihinmdlkakkaopbjbbcngflc&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:wvr:&quot;,&quot;cohorthint&quot;:&quot;Auto&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.26890e8ce68b320b919dddeceeb2e04ce8fcd9ba51bd00c78ab895af43f0102d&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{9664c65c-45c9-4abb-b8d6-25e8938d15c9}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;111.0.5508.0&quot;},{&quot;appid&quot;:&quot;ihnlcenocehgdaegdmhbidjhnhdchfmm&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:15j3:&quot;,&quot;cohorthint&quot;:&quot;Win (Including up-to-date)&quot;,&quot;cohortname&quot;:&quot;Win (Including up-to-date)&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.aeedb246d19256a956fedaa89fb62423ae5bd8855a2a1f3189161cf045645a19&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{3757b9e8-59bc-4f70-beef-7dc60b05305f}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;1.3.36.141&quot;},{&quot;appid&quot;:&quot;ojhpjlocmbogdgmfpkhlaaeamibhnphh&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:w0x:&quot;,&quot;cohorthint&quot;:&quot;Auto&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.478aa915e78878e332a0b4bb4d2a6fb67ff1c7f7b62fe906f47095ba5ae112d0&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{f7935331-4fce-4464-8731-cff198a1591b}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;1&quot;},{&quot;appid&quot;:&quot;dhlpobdgcjafebgbbhjdnapejmpkgiie&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:z9x:&quot;,&quot;cohorthint&quot;:&quot;Auto&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.0c24e9bd976adffa987e08fc54dc0950c84cf18f9cdb4c5caabc6acf24887c4f&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{b6e8ea65-4167-49ab-9be1-15baf5a292c4}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;20220505&quot;},{&quot;appid&quot;:&quot;imefjhfbkmcmebodilednhmaccmincoa&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:17lx:&quot;,&quot;cohorthint&quot;:&quot;desktop_1_flatbuffer&quot;,&quot;cohortname&quot;:&quot;desktop_1_flatbuffer&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.42229e9c82a535c988540e9e2d6100bfc3f02c4b3ed8b76dc6db1a161252fbd6&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{3b76ea7d-ebe1-4b21-91c6-3890fdc49378}&quot;,&quot;rd&quot;:5842},&quot;tag&quot;:&quot;desktop_1_flatbuffer&quot;,&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;29.6&quot;},{&quot;appid&quot;:&quot;efniojlnjndmcbiieegkicadnoecjjef&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:18ql:&quot;,&quot;cohorthint&quot;:&quot;Auto Stage3&quot;,&quot;cohortname&quot;:&quot;Auto Stage3&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.208a730f2bbaccf661167b5bacf86fb7cd241aa222b1fe8c8e097dfcd4534e80&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{bb08de34-5f21-4292-abe3-3b28d995deaa}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;456&quot;},{&quot;appid&quot;:&quot;jflookgnkcckhobaglndicnbbgbonegd&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:s7x:&quot;,&quot;cohorthint&quot;:&quot;Auto&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.2e53ceceaafe2349f092edd36b523724f6f07919687f4da8ef4136ae3c7e2439&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{04fdc43e-5941-45e4-bd42-571279f0b151}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;2904&quot;},{&quot;appid&quot;:&quot;dnhnnofocefcglhjeigmkhcgfoaipbaa&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:16j3:&quot;,&quot;cohorthint&quot;:&quot;Stable&quot;,&quot;cohortname&quot;:&quot;Stable&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.831f042cb02b1fc2f9fed3106f544be8b336828681a1613ced571c09ebca4cf2&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{37d59f31-8dfa-4def-8781-a724ebdd614a}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;2022.11.1.1&quot;},{&quot;appid&quot;:&quot;eeigpngbgcognadeebkilcpcaedhellh&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:w59:&quot;,&quot;cohorthint&quot;:&quot;Auto&quot;,&quot;cohortname&quot;:&quot;Auto&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.c64c9c1008f3ba5f6e18b3ca524bc98dcd8acfae0a2720a8f1f3ef0f8d643d05&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{a3d90bfe-b8cf-4a81-b13d-621c9770fae9}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;2020.11.2.164946&quot;},{&quot;_internal_experimental_sets&quot;:&quot;false&quot;,&quot;appid&quot;:&quot;gonpemdgkjcecdgbnaabipppbmgfggbe&quot;,&quot;brand&quot;:&quot;RXQR&quot;,&quot;cohort&quot;:&quot;1:z1x:&quot;,&quot;cohorthint&quot;:&quot;General release&quot;,&quot;cohortname&quot;:&quot;General release&quot;,&quot;enabled&quot;:true,&quot;lang&quot;:&quot;en-US&quot;,&quot;packages&quot;:{&quot;package&quot;:[{&quot;fp&quot;:&quot;1.c51d23bc0653142853b0d9dc8ba00f504aaae8a2a5b290e539b8790d88c0dcbe&quot;}]},&quot;ping&quot;:{&quot;ping_freshness&quot;:&quot;{e0f012e3-b268-483d-b93a-354fc2b9d77c}&quot;,&quot;rd&quot;:5842},&quot;updatecheck&quot;:{},&quot;version&quot;:&quot;2022.2.15.1&quot;}],&quot;arch&quot;:&quot;x64&quot;,&quot;dedup&quot;:&quot;cr&quot;,&quot;domainjoined&quot;:true,&quot;hw&quot;:{&quot;avx&quot;:true,&quot;physmemory&quot;:32,&quot;sse&quot;:true,&quot;sse2&quot;:true,&quot;sse3&quot;:true,&quot;sse41&quot;:true,&quot;sse42&quot;:true,&quot;ssse3&quot;:true},&quot;ismachine&quot;:true,&quot;nacl_arch&quot;:&quot;x86-64&quot;,&quot;os&quot;:{&quot;arch&quot;:&quot;x86_64&quot;,&quot;platform&quot;:&quot;Windows&quot;,&quot;version&quot;:&quot;10.0.19045.2364&quot;},&quot;prodversion&quot;:&quot;108.0.5359.125&quot;,&quot;protocol&quot;:&quot;3.1&quot;,&quot;requestid&quot;:&quot;{5ad2197a-173f-4c9a-bbac-cdee78abf8c6}&quot;,&quot;sessionid&quot;:&quot;{2343d71e-2887-48fb-a94f-b177caf58897}&quot;,&quot;updater&quot;:{&quot;autoupdatecheckenabled&quot;:true,&quot;ismachine&quot;:true,&quot;lastchecked&quot;:0,&quot;laststarted&quot;:0,&quot;name&quot;:&quot;Omaha&quot;,&quot;updatepolicy&quot;:-1,&quot;version&quot;:&quot;1.3.36.152&quot;},&quot;updaterversion&quot;:&quot;108.0.5359.125&quot;}}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">update.googleapis.com</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/service/update2/json?cup2key=12:UN1IxrqzmB5jI_-SR0IlsiUam8LLVa4oGYtm6ft-Ta8&amp;cup2hreq=00e537d92ff807650458da5a0646ff13efbb2eb18e58c8f5b3e043a7c612190e</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-Goog-Update-AppId" elementType="Header">
+                  <stringProp name="Header.name">X-Goog-Update-AppId</stringProp>
+                  <stringProp name="Header.value">neifaoindggfcjicffkgpmnlppeffabd,gcmjkmgdlgnkkcocmoeiminaijmmjnii,oimompecagnajdejgnnjijobebaeigek,obedbbhbpmojnkanicioggnmelmoomoc,giekcmmlnklenlaomppkphknjmnnpneh,lmelglejhemejginpboagddgdfbepgmp,ehgidpndbllacpjalkiimkbadgjfnnmc,khaoiebndkojlmppeemjhbpbandiljpe,hnimpnehoodheedghdeeijklkeaacbdc,laoigpblnllgcgjnjnllmfolckpjlhki,ggkkehgbnfjpeggfpleeakpidbkibbmn,gkmgaooipdjhmangpemjhigmamcehddo,llkgjffcdpffmhiakmfcdcblohccpfmo,hfnkpimlhhgieaddgfemjhofmfblmnib,jamhcnnkihinmdlkakkaopbjbbcngflc,ihnlcenocehgdaegdmhbidjhnhdchfmm,ojhpjlocmbogdgmfpkhlaaeamibhnphh,dhlpobdgcjafebgbbhjdnapejmpkgiie,imefjhfbkmcmebodilednhmaccmincoa,efniojlnjndmcbiieegkicadnoecjjef,jflookgnkcckhobaglndicnbbgbonegd,dnhnnofocefcglhjeigmkhcgfoaipbaa,eeigpngbgcognadeebkilcpcaedhellh,gonpemdgkjcecdgbnaabipppbmgfggbe</stringProp>
+                </elementProp>
+                <elementProp name="X-Goog-Update-Updater" elementType="Header">
+                  <stringProp name="Header.name">X-Goog-Update-Updater</stringProp>
+                  <stringProp name="Header.value">chrome-108.0.5359.125</stringProp>
+                </elementProp>
+                <elementProp name="X-Goog-Update-Interactivity" elementType="Header">
+                  <stringProp name="Header.name">X-Goog-Update-Interactivity</stringProp>
+                  <stringProp name="Header.value">bg</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="HTTP(S) Test Script Recorder" enabled="true">
+        <stringProp name="ProxyControlGui.port">1111</stringProp>
+        <collectionProp name="ProxyControlGui.exclude_list"/>
+        <collectionProp name="ProxyControlGui.include_list"/>
+        <boolProp name="ProxyControlGui.capture_http_headers">true</boolProp>
+        <intProp name="ProxyControlGui.grouping_mode">0</intProp>
+        <boolProp name="ProxyControlGui.add_assertion">false</boolProp>
+        <stringProp name="ProxyControlGui.sampler_type_name"></stringProp>
+        <boolProp name="ProxyControlGui.sampler_redirect_automatically">false</boolProp>
+        <boolProp name="ProxyControlGui.sampler_follow_redirects">true</boolProp>
+        <boolProp name="ProxyControlGui.use_keepalive">true</boolProp>
+        <boolProp name="ProxyControlGui.detect_graphql_request">true</boolProp>
+        <boolProp name="ProxyControlGui.sampler_download_images">false</boolProp>
+        <intProp name="ProxyControlGui.proxy_http_sampler_naming_mode">0</intProp>
+        <stringProp name="ProxyControlGui.default_encoding"></stringProp>
+        <stringProp name="ProxyControlGui.proxy_prefix_http_sampler_name">Home</stringProp>
+        <stringProp name="ProxyControlGui.proxy_pause_http_sampler"></stringProp>
+        <boolProp name="ProxyControlGui.notify_child_sl_filtered">false</boolProp>
+        <boolProp name="ProxyControlGui.regex_match">false</boolProp>
+        <stringProp name="ProxyControlGui.content_type_include"></stringProp>
+        <stringProp name="ProxyControlGui.content_type_exclude"></stringProp>
+      </ProxyControl>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
